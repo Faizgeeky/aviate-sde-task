@@ -4,7 +4,7 @@ DRF CRUD API to add, delete and search data from api for ats score
 
 Search can be done on splitted words without filtering by python but only orm 
 
-## Setup & Installation 🛠️
+## Setup & Installation 
 
 First things first, you'll need to get this thing running on your machine. Here's how:
 
@@ -37,7 +37,7 @@ python manage.py runserver
 
 Now your server should be running at `http://127.0.0.1:8000/` 
 
-## API Endpoints 📡
+## API Endpoints 
 
 Here's all the cool stuff you can do with this API:
 
