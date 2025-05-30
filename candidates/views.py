@@ -29,7 +29,7 @@ class CandidateViewSet(viewsets.ModelViewSet):
             return queryset
 
         # Input validation
-        if len(search) > 100:  # Reasonable limit for search terms
+        if len(search) > 100:  
             raise ValidationError("Search term too long")
 
         try:
@@ -40,13 +40,14 @@ class CandidateViewSet(viewsets.ModelViewSet):
             # Build OR conditions for each word
             conditions = Q()
             for word in search_words:
+                #NOTE below cond is optional just for performance
                 if len(word) >= 2:  # Only search for words with 2 or more characters
                     conditions |= Q(name__icontains=word)
             
             # Get all matching candidates
             queryset = queryset.filter(conditions)
             
-            # Order by exact matches first, then partial matches
+            # Order by exact matches first, then partial matches 
             exact_match = ' '.join(search_words)
             queryset = queryset.annotate(
                 exact_match=Case(
@@ -60,7 +61,7 @@ class CandidateViewSet(viewsets.ModelViewSet):
             return queryset
 
         except Exception as e:
-            # Log the error here in production
+            # TODO - add logger for prod 
             print(f"Search error: {str(e)}")  # Temporary debug print
             return Candidate.objects.none()
 
@@ -71,8 +72,7 @@ class CandidateViewSet(viewsets.ModelViewSet):
             
             # Debug print
             print(f"Search term: {request.query_params.get('search', '')}")
-            print(f"Query count: {queryset.count()}")
-            print(f"SQL Query: {queryset.query}")
+           
             
             page = self.paginate_queryset(queryset)
             

@@ -1,4 +1,4 @@
-# Aviate SDE Task - Candidate Management API 🚀
+# Aviate SDE Task - Candidate Management API 
 
 DRF CRUD API to add, delete and search data from api for ats score
 
@@ -35,7 +35,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Now your server should be running at `http://127.0.0.1:8000/` 🎉
+Now your server should be running at `http://127.0.0.1:8000/` 
 
 ## API Endpoints 📡
 
