@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+static/
+.env
+.env.*
+*.env
+local_settings.py
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Virtualenv
+venv/
+ENV/
+env/
+.venv/
+.Python
+
+
+# Coverage
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache
+.pytest_cache/
+.coverage.*
+
+# mypy
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# IDEs
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Test output
+test-results/
