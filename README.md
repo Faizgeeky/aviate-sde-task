@@ -1,4 +1,4 @@
-# Aviate SDE Task - Candidate Management API 
+# Aviate SDE Task 
 
 DRF CRUD API to add, delete and search data from api for ats score
 
