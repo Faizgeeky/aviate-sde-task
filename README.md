@@ -10,7 +10,7 @@ First things first, you'll need to get this thing running on your machine. Here'
 
 1. Clone this repo (duh!):
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Faizgeeky/aviate-sde-task
 cd aviate-sde-task
 ```
 
